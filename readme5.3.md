@@ -83,6 +83,11 @@ server {
     Подключитесь во второй контейнер и отобразите  её листинг и содержание файлов в /data контейнера.
 ````
 ```
+vagrant@netology1:~$ sudo docker run -v /home/vagrant/date:/date --name centos_obj1 -d  centos7 tail -f /dev/null
+99f9c4e4e6650d2e37aa8e570134d969f7820f5130657216e6a02293b9fb6ca3
+vagrant@netology1:~$ sudo docker run -v /home/vagrant/date:/date --name debian_obj1 -d  debian:1.01 tail -f /dev/null
+dafec29cc961817effd2bc07a6454b86abd835edc25ef4836a35d570d88e37a6
+
 vagrant@netology1:~/debian$ sudo docker exec -d centos_obj1 touch /date/file_cent
 vagrant@netology1:~/debian$ sudo docker exec -it centos_obj1 bash
 root@99f9c4e4e665 /]# ls
