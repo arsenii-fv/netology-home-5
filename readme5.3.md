@@ -80,17 +80,18 @@ server {
     Запустите второй контейнер из образа debian в фоновом режиме, подключив папку /data из текущей рабочей директории на хостовой машине в /data контейнера;
     Подключитесь к первому контейнеру с помощью docker exec и создайте текстовый файл любого содержания в /data;
     Добавьте еще один файл в папку /data на хостовой машине;
-    Подключитесь во второй контейнер и отобразите  ё листинг и содержание файлов в /data контейнера.
+    Подключитесь во второй контейнер и отобразите  её листинг и содержание файлов в /data контейнера.
 ````
+```
 vagrant@netology1:~/debian$ sudo docker exec -d centos_obj1 touch /date/file_cent
 vagrant@netology1:~/debian$ sudo docker exec -it centos_obj1 bash
-[root@99f9c4e4e665 /]# ls
+root@99f9c4e4e665 /]# ls
 anaconda-post.log  bin  date  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-[root@99f9c4e4e665 /]# cd /date
-[root@99f9c4e4e665 date]# ls
+root@99f9c4e4e665 /]# cd /date
+root@99f9c4e4e665 date]# ls
 file_cent  testfile.txt
-[root@99f9c4e4e665 date]# vi file_cent
-[root@99f9c4e4e665 date]# exit
+root@99f9c4e4e665 date]# vi file_cent
+root@99f9c4e4e665 date]# exit
 exit
 
 vagrant@netology1:~$ ls
@@ -105,4 +106,4 @@ root@dafec29cc961:/# cd date
 root@dafec29cc961:/date# ls
 file_cent  file_host  testfile.txt
 root@dafec29cc961:/date#
-
+````
