@@ -63,4 +63,13 @@ vagrant@netology1:~$ sudo docker exec -it centos_obj1 bash
 anaconda-post.log  bin  date  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 [root@982b284cf010 /]# vi /date/filecent
 [root@982b284cf010 /]# exit
+vagrant@netology1:~$ sudo vi /date/file_host
+
+vagrant@netology1:~/date$ sudo docker exec -it debian_obj1 bash
+root@d4ab6fc7c3fe:/# ls
+bin  boot  date  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@d4ab6fc7c3fe:/# cd /date
+root@d4ab6fc7c3fe:/date# ls
+file_host  filecent  
+root@d4ab6fc7c3fe:/date# exit
 ````
