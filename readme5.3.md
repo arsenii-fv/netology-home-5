@@ -52,5 +52,15 @@ Hey, Netology
     Подключитесь во второй контейнер и отобразите  её листинг и содержание файлов в /data контейнера.
 ````
 ```
-docker pull arseniidoc/netology-home5:hi_devops
+
+vagrant@netology1:~$ sudo docker run -v /home/vagrant/date:/date --name centos_obj1 -d  centos7 tail -f /dev/null
+982b284cf010c483deaf3362873f0baaa887110d0f0ca25d250b8d0241ae64d2
+vagrant@netology1:~$ sudo docker run -v /home/vagrant/date:/date --name debian_obj1 -d  debian:1.01 tail -f /dev/null
+d4ab6fc7c3fe91341e02ed099e301930027e5d8569b8be61e7ba28b5961d9e61
+vagrant@netology1:~$
+vagrant@netology1:~$ sudo docker exec -it centos_obj1 bash
+[root@982b284cf010 /]# ls
+anaconda-post.log  bin  date  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[root@982b284cf010 /]# vi /date/filecent
+[root@982b284cf010 /]# exit
 ````
