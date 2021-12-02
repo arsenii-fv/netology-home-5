@@ -21,7 +21,7 @@ Hey, Netology
 ```
 Опубликуйте созданный форк в своем репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo.
 ````
- [ссылка]https://hub.docker.com/r/arseniidoc/netology-home5
+ [ссылка]:https://hub.docker.com/r/arseniidoc/netology-home5
  
 ````
 ### Задача 2
