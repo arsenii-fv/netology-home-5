@@ -18,6 +18,18 @@
 ````
 Для получения зачета, вам необходимо предоставить скриншот из терминала (консоли), с выводом команды:
 docker node ls
+vagrant@netology1:~/ya-cloud/terraform$ ssh centos@62.84.126.239
+[centos@node01 ~]$ sudo -i
+[root@node01 ~]# docker node ls
+ID                            HOSTNAME             STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+o6bojbpqcyj9kx2qmvmjw14qm *   node01.netology.yc   Ready     Active         Reachable        20.10.12
+r97prptkfkzjlkri99csw314u     node02.netology.yc   Ready     Active         Reachable        20.10.12
+z8ls8xvxyyt5ej9apv83exo3x     node03.netology.yc   Ready     Active         Leader           20.10.12
+j9y3t8xhpq93zxi83jje1ex6r     node04.netology.yc   Ready     Active                          20.10.12
+j2rrfg2xs5ppijwpn2jnus97o     node05.netology.yc   Ready     Active                          20.10.12
+3aixehocakmwdhiuoki196kel     node06.netology.yc   Ready     Active                          20.10.12
+[root@node01 ~]#
+
 ````
 ````
 
@@ -28,6 +40,17 @@ docker node ls
 Для получения зачета, вам необходимо предоставить скриншот из терминала (консоли), с выводом команды:
 docker service ls
 ````
+[root@node01 ~]# docker service ls
+ID             NAME                                MODE         REPLICAS   IMAGE                                          PORTS
+7rstgquvk72k   swarm_monitoring_alertmanager       replicated   1/1        stefanprodan/swarmprom-alertmanager:v0.14.0
+sikklolnab7l   swarm_monitoring_caddy              replicated   1/1        stefanprodan/caddy:latest                      *:3000->3000/tcp, *:9090->9090/tcp, *:9093-9094->9093-9094/tcp
+ffe4rhltkyxl   swarm_monitoring_cadvisor           global       6/6        google/cadvisor:latest
+d69dvo53z574   swarm_monitoring_dockerd-exporter   global       6/6        stefanprodan/caddy:latest
+ads5o4xom0b0   swarm_monitoring_grafana            replicated   1/1        stefanprodan/swarmprom-grafana:5.3.4
+l9z124m9zei6   swarm_monitoring_node-exporter      global       6/6        stefanprodan/swarmprom-node-exporter:v0.16.0
+wn8f7xkgqe78   swarm_monitoring_prometheus         replicated   1/1        stefanprodan/swarmprom-prometheus:v2.5.0
+sqiqrsswnq9z   swarm_monitoring_unsee              replicated   1/1        cloudflare/unsee:v0.8.0
+[root@node01 ~]#
 ````
 
 ````
