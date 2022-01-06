@@ -85,4 +85,5 @@ command and provide the following key:
 Please remember to store this key in a password manager, since without it you
 will not be able to restart the manager.
 
+Эта команда блокмыми менеджерами роя. После перезапуска Docker необходимо разблокировать менеджеры роя, используя ключ сгенерированный данной командой.
 ````
