@@ -40,6 +40,7 @@ j2rrfg2xs5ppijwpn2jnus97o     node05.netology.yc   Ready     Active             
 Для получения зачета, вам необходимо предоставить скриншот из терминала (консоли), с выводом команды:
 docker service ls
 ````
+````
 [root@node01 ~]# docker service ls
 ID             NAME                                MODE         REPLICAS   IMAGE                                          PORTS
 7rstgquvk72k   swarm_monitoring_alertmanager       replicated   1/1        stefanprodan/swarmprom-alertmanager:v0.14.0
