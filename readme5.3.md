@@ -11,7 +11,9 @@
 запуск веб-сервера в фоне с индекс-страницей, содержащей HTML-код ниже:
 ```
 <html>
-<head>
+
+    netology-home-5
+  <head>
 Hey, Netology
 </head>
 <body>
